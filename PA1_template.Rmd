@@ -24,9 +24,10 @@ No preprocessing was needed.
 ####What is mean total number of steps taken per day?  
 ```{r}
 tot_steps_day <- projdata %>% group_by(date) %>% summarize(TotSteps = sum(steps, na.rm=TRUE))
+```
+```{r fig.height=4}
+ggplot(data=tot_steps_day, aes(tot_steps_day$TotSteps)) +labs(x="Total Steps per Day", y="Count")+ geom_histogram()
 
-plot1 <- ggplot(data=tot_steps_day, aes(tot_steps_day$TotSteps)) +labs(x="Total Steps per Day", y="Count")+ geom_histogram()
-plot1
 ```
 
 ``` {r meanstepsday}

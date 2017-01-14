@@ -10,6 +10,8 @@ require(dplyr)
 require(ggplot2)
 require(lubridate)
 require(lattice)
+require(knitr)
+require(markdown)
 ```
 
 ####Loading and preprocessing the data  
